@@ -96,6 +96,14 @@ struct ContentView: View {
                                         .padding(.horizontal, 10)
                                 }
                             }
+                            else
+                            {
+                                VStack(alignment: .center) {
+                                    Text("You're offline.")
+                                        .font(.subheadline)
+                                        .foregroundColor(.gray)
+                                }
+                            }
                             
                             VStack(alignment: .leading) {
                                 Text("Earnings Trends in Kitchener-Waterloo")
@@ -172,7 +180,7 @@ struct ContentView: View {
                                 Text("GO")
                                     .padding(30)
                                     .bold()
-                                    .background(Color.black)
+                                    .background(Color.blue)
                                     .foregroundColor(.white)
                                     .clipShape(Circle())
                                     .shadow(radius: 5)
@@ -244,13 +252,18 @@ struct LoadingAnimation: View {
         GeometryReader { geometry in
             TimelineView(.animation) { timeline in
                 let now = timeline.date.timeIntervalSinceReferenceDate
-                let duration = 1.5
+                let duration = 4.0  // Total duration for one complete cycle
                 let progress = (now.truncatingRemainder(dividingBy: duration)) / duration
-                let startingWidth = geometry.size.width / 20
-                let maxWidth = geometry.size.width
 
-                // Width of the moving capsule changes over time
-                let capsuleWidth = startingWidth + (maxWidth - startingWidth) * progress
+                // Calculate current expansion/collapse factor
+                let factor = abs(1 - 2 * progress)  // Expands from 0 to 1 and collapses back to 0
+
+                // Pink line width and offset calculation
+                let maxOffset = geometry.size.width / 2
+                let currentWidth = maxOffset * (1 - factor)
+                let minOpacity = 0.3  // Minimum opacity to avoid being too bright
+                let maxOpacity = 0.6  // Maximum opacity to create a more subtle effect
+                let opacity = minOpacity + (maxOpacity - minOpacity) * sin(progress * .pi * 2)
 
                 ZStack {
                     // Background stationary gray line
@@ -258,19 +271,17 @@ struct LoadingAnimation: View {
                         .fill(Color.gray.opacity(0.2))
                         .frame(height: 2)
 
-                    // Moving blue line that shoots outward
+                    // Pink line expanding from center and collapsing back to center
                     Capsule()
-                        .fill(Color.pink)
-                        .frame(width: capsuleWidth, height: 2)
-                        .offset(x: (geometry.size.width - capsuleWidth) / 2)
-                        .opacity(1.0 - progress) // Fade out as it moves outward
+                        .fill(Color.pink.opacity(opacity))
+                        .frame(width: currentWidth * 2, height: 2)
                 }
+                .frame(width: geometry.size.width, alignment: .center)
             }
         }
-        .frame(height: 10)
+        .frame(height: 2)
     }
 }
-
 
 struct ActivityIndicator: UIViewRepresentable {
     @Binding var isAnimating: Bool
