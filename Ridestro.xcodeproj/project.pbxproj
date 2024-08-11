@@ -14,6 +14,9 @@
 		FB0C78DB2C5699890036FF31 /* Ride_StroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78DA2C5699890036FF31 /* Ride_StroTests.swift */; };
 		FB0C78E52C5699890036FF31 /* Ride_StroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78E42C5699890036FF31 /* Ride_StroUITests.swift */; };
 		FB0C78E72C5699890036FF31 /* Ride_StroUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78E62C5699890036FF31 /* Ride_StroUITestsLaunchTests.swift */; };
+		FB0C78F92C569A1A0036FF31 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = FB0C78F82C569A1A0036FF31 /* MapboxMaps */; };
+		FB0C78FB2C569EC30036FF31 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78FA2C569EC30036FF31 /* MapView.swift */; };
+		FB0C78FD2C569ED40036FF31 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78FC2C569ED40036FF31 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		FB0C78E02C5699890036FF31 /* Ride StroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ride StroUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0C78E42C5699890036FF31 /* Ride_StroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride_StroUITests.swift; sourceTree = "<group>"; };
 		FB0C78E62C5699890036FF31 /* Ride_StroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride_StroUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FB0C78F62C5699D50036FF31 /* Ride-Stro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Ride-Stro-Info.plist"; sourceTree = SOURCE_ROOT; };
+		FB0C78FA2C569EC30036FF31 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		FB0C78FC2C569ED40036FF31 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB0C78F92C569A1A0036FF31 /* MapboxMaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,7 @@
 				FB0C78D92C5699890036FF31 /* Ride StroTests */,
 				FB0C78E32C5699890036FF31 /* Ride StroUITests */,
 				FB0C78C72C5699870036FF31 /* Products */,
+				FB0C78F72C569A1A0036FF31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,10 +102,13 @@
 		FB0C78C82C5699870036FF31 /* Ride Stro */ = {
 			isa = PBXGroup;
 			children = (
+				FB0C78F62C5699D50036FF31 /* Ride-Stro-Info.plist */,
 				FB0C78C92C5699870036FF31 /* Ride_StroApp.swift */,
 				FB0C78CB2C5699870036FF31 /* ContentView.swift */,
 				FB0C78CD2C5699890036FF31 /* Assets.xcassets */,
 				FB0C78CF2C5699890036FF31 /* Preview Content */,
+				FB0C78FA2C569EC30036FF31 /* MapView.swift */,
+				FB0C78FC2C569ED40036FF31 /* LocationManager.swift */,
 			);
 			path = "Ride Stro";
 			sourceTree = "<group>";
@@ -127,6 +138,13 @@
 			path = "Ride StroUITests";
 			sourceTree = "<group>";
 		};
+		FB0C78F72C569A1A0036FF31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +161,9 @@
 			dependencies = (
 			);
 			name = "Ride Stro";
+			packageProductDependencies = (
+				FB0C78F82C569A1A0036FF31 /* MapboxMaps */,
+			);
 			productName = "Ride Stro";
 			productReference = FB0C78C62C5699870036FF31 /* Ride Stro.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +236,9 @@
 				Base,
 			);
 			mainGroup = FB0C78BD2C5699870036FF31;
+			packageReferences = (
+				FB0C78F32C5699B30036FF31 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+			);
 			productRefGroup = FB0C78C72C5699870036FF31 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB0C78FD2C569ED40036FF31 /* LocationManager.swift in Sources */,
 				FB0C78CC2C5699870036FF31 /* ContentView.swift in Sources */,
+				FB0C78FB2C569EC30036FF31 /* MapView.swift in Sources */,
 				FB0C78CA2C5699870036FF31 /* Ride_StroApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +451,9 @@
 				DEVELOPMENT_TEAM = HPXD4Z7FNQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Ride-Stro-Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app requires access to your location at all times to provide navigation and tracking services.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires access to your location to show your current position on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +483,9 @@
 				DEVELOPMENT_TEAM = HPXD4Z7FNQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Ride-Stro-Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app requires access to your location at all times to provide navigation and tracking services.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires access to your location to show your current position on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -588,6 +620,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FB0C78F32C5699B30036FF31 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios";
+			requirement = {
+				kind = exactVersion;
+				version = 10.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FB0C78F82C569A1A0036FF31 /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB0C78F32C5699B30036FF31 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FB0C78BE2C5699870036FF31 /* Project object */;
 }
