@@ -32,20 +32,53 @@ struct ContentView: View {
                 .ignoresSafeArea()
                 
                 VStack {
-                    // Earnings Badge at the Top
+                    // Top icons: Hamburger menu and Lock icon
+                    HStack {
+                        Button(action: {
+                            // Menu action
+                        }) {
+                            Image(systemName: "line.horizontal.3")
+                                .padding(20)
+                                .bold()
+                                .background(Color.white)
+                                .foregroundColor(Color.black)
+                                .clipShape(Circle())
+                                .shadow(radius: 5)
+                             
+                        }
+                        Spacer()
+                        Button(action: {
+                            // Security action
+                        }) {
+                            Image(systemName: "magnifyingglass")
+                                .padding(15)
+                                .bold()
+                                .foregroundColor(Color.black)
+                                .background(Color.white)
+                                .clipShape(Circle())
+                                .shadow(radius: 5)
+
+                        }
+                    }
+                    .padding([.leading, .trailing], 20)
+                    .padding(.top, 15)
+                    .opacity(isPanelOpen ? 0.0 : max(0, 1 - Double(abs(offset.height) / (UIScreen.main.bounds.height / 2))))
+                    
+                    // Earnings Badge at the Top, centered
+                    Spacer()
                     HStack {
                         Spacer()
                         VStack {
                             Text(attributedEarnings)
                                 .font(.headline)
                         }
-                        .padding(20)
+                        .padding(15)
                         .background(Color.black)
-                        .cornerRadius(50)
+                        .cornerRadius(25)
                         .shadow(radius: 5)
-                        .padding(.top, 15)
                         Spacer()
                     }
+                    .padding(.top, -60)
                     .opacity(isPanelOpen ? 0.0 : max(0, 1 - Double(abs(offset.height) / (UIScreen.main.bounds.height / 2))))
                     
                     Spacer()
@@ -53,37 +86,16 @@ struct ContentView: View {
                     // Sliding Panel with Go Online/Offline button
                     ZStack(alignment: .top) {
                         VStack {
-                            HStack {
-                                Button(action: {
-                                    // Menu action
-                                }) {
-                                    Image(systemName: "line.horizontal.3")
-                                        .padding()
-                                        .background(Color.gray.opacity(0.2))
-                                        .cornerRadius(10)
-                                }
-                                Spacer()
-                                if isOnline {
-                                    VStack {
-                                        Text("Finding pings...")
-                                            .font(.subheadline)
-                                            .foregroundColor(.gray)
-                                        LoadingAnimation()
-                                            .frame(height: 8)
-                                            .padding(.horizontal, 10)
-                                    }
-                                }
-                                Spacer()
-                                Button(action: {
-                                    // Security action
-                                }) {
-                                    Image(systemName: "lock.fill")
-                                        .padding()
-                                        .background(Color.gray.opacity(0.2))
-                                        .cornerRadius(10)
+                            if isOnline {
+                                VStack(alignment: .center) {
+                                    Text("Finding pings...")
+                                        .font(.subheadline)
+                                        .foregroundColor(.gray)
+                                    LoadingAnimation()
+                                        .frame(height: 8)
+                                        .padding(.horizontal, 10)
                                 }
                             }
-                            .padding([.leading, .trailing], 20)
                             
                             VStack(alignment: .leading) {
                                 Text("Earnings Trends in Kitchener-Waterloo")
@@ -159,10 +171,11 @@ struct ContentView: View {
                             }) {
                                 Text("GO")
                                     .padding(30)
+                                    .bold()
                                     .background(Color.blue)
                                     .foregroundColor(.white)
-                                    .bold()
                                     .clipShape(Circle())
+                                    .shadow(radius: 5)
                             }
                             .opacity(isPanelOpen ? 0.0 : max(0, 1 - Double(abs(offset.height) / (UIScreen.main.bounds.height / 2))))
                             .offset(y: isPanelOpen ? -UIScreen.main.bounds.height / 2 + 90 + offset.height : UIScreen.main.bounds.height / 2 - 90 + offset.height)
@@ -176,8 +189,9 @@ struct ContentView: View {
                                     recenter()
                                 }) {
                                     Image(systemName: "location.fill")
-                                        .padding(10)
+                                        .padding(12)
                                         .background(Color.white)
+                                        .foregroundColor(Color.black)
                                         .clipShape(Circle())
                                         .shadow(radius: 5)
                                 }
