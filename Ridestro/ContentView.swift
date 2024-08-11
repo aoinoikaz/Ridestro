@@ -41,7 +41,7 @@ struct ContentView: View {
                                 .padding(20)
                                 .bold()
                                 .background(Color.white)
-                                .foregroundColor(Color.black)
+                                .foregroundColor(Color.pink)
                                 .clipShape(Circle())
                                 .shadow(radius: 5)
                              
@@ -53,7 +53,7 @@ struct ContentView: View {
                             Image(systemName: "magnifyingglass")
                                 .padding(15)
                                 .bold()
-                                .foregroundColor(Color.black)
+                                .foregroundColor(Color.pink)
                                 .background(Color.white)
                                 .clipShape(Circle())
                                 .shadow(radius: 5)
@@ -129,7 +129,7 @@ struct ContentView: View {
                                     Text("Go Offline")
                                         .padding()
                                         .frame(width: 150, height: 50)
-                                        .background(Color.red)
+                                        .background(Color.pink)
                                         .foregroundColor(.white)
                                         .cornerRadius(25)
                                         .shadow(radius: 5)
@@ -172,7 +172,7 @@ struct ContentView: View {
                                 Text("GO")
                                     .padding(30)
                                     .bold()
-                                    .background(Color.blue)
+                                    .background(Color.black)
                                     .foregroundColor(.white)
                                     .clipShape(Circle())
                                     .shadow(radius: 5)
@@ -224,7 +224,7 @@ struct ContentView: View {
     
     var attributedEarnings: AttributedString {
         var earningsString = AttributedString(localized: "$\(earnings, specifier: "%.2f")")
-        earningsString[earningsString.range(of: "$")!].foregroundColor = .green
+        earningsString[earningsString.range(of: "$")!].foregroundColor = .pink
         earningsString[earningsString.range(of: String(format: "%.2f", earnings))!].foregroundColor = .white
         return earningsString
     }
@@ -239,26 +239,35 @@ struct ContentView: View {
     }
 }
 
-// Custom Loading Animation
 struct LoadingAnimation: View {
     var body: some View {
         GeometryReader { geometry in
             TimelineView(.animation) { timeline in
                 let now = timeline.date.timeIntervalSinceReferenceDate
-                let duration = 3.33
+                let duration = 1.5
                 let progress = (now.truncatingRemainder(dividingBy: duration)) / duration
-                let offsetValue = (geometry.size.width - geometry.size.width / 8) * (progress < 0.5 ? progress * 2 : (1 - progress) * 2)
-                
-                ZStack(alignment: .leading) {
+                let startingWidth = geometry.size.width / 20
+                let maxWidth = geometry.size.width
+
+                // Width of the moving capsule changes over time
+                let capsuleWidth = startingWidth + (maxWidth - startingWidth) * progress
+
+                ZStack {
+                    // Background stationary gray line
                     Capsule()
-                        .fill(Color.white)
+                        .fill(Color.gray.opacity(0.2))
+                        .frame(height: 2)
+
+                    // Moving blue line that shoots outward
                     Capsule()
-                        .fill(Color.blue)
-                        .frame(width: geometry.size.width / 8, height: 8)
-                        .offset(x: offsetValue)
+                        .fill(Color.pink)
+                        .frame(width: capsuleWidth, height: 2)
+                        .offset(x: (geometry.size.width - capsuleWidth) / 2)
+                        .opacity(1.0 - progress) // Fade out as it moves outward
                 }
             }
         }
+        .frame(height: 10)
     }
 }
 

@@ -19,17 +19,18 @@ struct MapView: UIViewRepresentable {
         }
 
         let resourceOptions = ResourceOptions(accessToken: accessToken)
-        let mapInitOptions = MapInitOptions(resourceOptions: resourceOptions, styleURI: .streets)
+        let mapInitOptions = MapInitOptions(resourceOptions: resourceOptions, styleURI: .dark)
         let newMapView = MapboxMaps.MapView(frame: .zero, mapInitOptions: mapInitOptions)
 
         newMapView.ornaments.compassView.isHidden = true
         newMapView.ornaments.scaleBarView.isHidden = true
         newMapView.ornaments.logoView.isHidden = true
         newMapView.ornaments.attributionButton.isHidden = true
-
+        
         // Add puck for showing current location
-        newMapView.location.options.puckType = .puck2D()
-
+        let configuration = Puck2DConfiguration.makeDefault(showBearing: true)
+        newMapView.location.options.puckType = .puck2D(configuration)
+        
         // Listen to camera changes
         newMapView.mapboxMap.onEvery(.cameraChanged) { [self] _ in
             guard let userLocation = userLocation else { return }
