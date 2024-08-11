@@ -6,9 +6,9 @@
 //
 
 import XCTest
-@testable import Ride_Stro
+@testable import Ridestro
 
-final class Ride_StroTests: XCTestCase {
+final class RidestroTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

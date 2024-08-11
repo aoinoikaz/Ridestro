@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB0C78CA2C5699870036FF31 /* Ride_StroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78C92C5699870036FF31 /* Ride_StroApp.swift */; };
+		FB0C78CA2C5699870036FF31 /* RidestroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78C92C5699870036FF31 /* RidestroApp.swift */; };
 		FB0C78CC2C5699870036FF31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78CB2C5699870036FF31 /* ContentView.swift */; };
 		FB0C78CE2C5699890036FF31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0C78CD2C5699890036FF31 /* Assets.xcassets */; };
 		FB0C78D12C5699890036FF31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0C78D02C5699890036FF31 /* Preview Assets.xcassets */; };
-		FB0C78DB2C5699890036FF31 /* Ride_StroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78DA2C5699890036FF31 /* Ride_StroTests.swift */; };
-		FB0C78E52C5699890036FF31 /* Ride_StroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78E42C5699890036FF31 /* Ride_StroUITests.swift */; };
-		FB0C78E72C5699890036FF31 /* Ride_StroUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78E62C5699890036FF31 /* Ride_StroUITestsLaunchTests.swift */; };
+		FB0C78DB2C5699890036FF31 /* RidestroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78DA2C5699890036FF31 /* RidestroTests.swift */; };
+		FB0C78E52C5699890036FF31 /* RidestroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78E42C5699890036FF31 /* RidestroUITests.swift */; };
+		FB0C78E72C5699890036FF31 /* RidestroUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78E62C5699890036FF31 /* RidestroUITestsLaunchTests.swift */; };
 		FB0C78F92C569A1A0036FF31 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = FB0C78F82C569A1A0036FF31 /* MapboxMaps */; };
 		FB0C78FB2C569EC30036FF31 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78FA2C569EC30036FF31 /* MapView.swift */; };
 		FB0C78FD2C569ED40036FF31 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78FC2C569ED40036FF31 /* LocationManager.swift */; };
@@ -38,16 +38,16 @@
 
 /* Begin PBXFileReference section */
 		FB0C78C62C5699870036FF31 /* Ridestro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ridestro.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB0C78C92C5699870036FF31 /* Ride_StroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride_StroApp.swift; sourceTree = "<group>"; };
+		FB0C78C92C5699870036FF31 /* RidestroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidestroApp.swift; sourceTree = "<group>"; };
 		FB0C78CB2C5699870036FF31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FB0C78CD2C5699890036FF31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB0C78D02C5699890036FF31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB0C78D62C5699890036FF31 /* RidestroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RidestroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB0C78DA2C5699890036FF31 /* Ride_StroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride_StroTests.swift; sourceTree = "<group>"; };
+		FB0C78DA2C5699890036FF31 /* RidestroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidestroTests.swift; sourceTree = "<group>"; };
 		FB0C78E02C5699890036FF31 /* RidestroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RidestroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB0C78E42C5699890036FF31 /* Ride_StroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride_StroUITests.swift; sourceTree = "<group>"; };
-		FB0C78E62C5699890036FF31 /* Ride_StroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride_StroUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		FB0C78F62C5699D50036FF31 /* Ride-Stro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Ride-Stro-Info.plist"; sourceTree = SOURCE_ROOT; };
+		FB0C78E42C5699890036FF31 /* RidestroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidestroUITests.swift; sourceTree = "<group>"; };
+		FB0C78E62C5699890036FF31 /* RidestroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidestroUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FB0C78F62C5699D50036FF31 /* Ridestro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ridestro-Info.plist"; sourceTree = SOURCE_ROOT; };
 		FB0C78FA2C569EC30036FF31 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		FB0C78FC2C569ED40036FF31 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,8 +102,8 @@
 		FB0C78C82C5699870036FF31 /* Ridestro */ = {
 			isa = PBXGroup;
 			children = (
-				FB0C78F62C5699D50036FF31 /* Ride-Stro-Info.plist */,
-				FB0C78C92C5699870036FF31 /* Ride_StroApp.swift */,
+				FB0C78F62C5699D50036FF31 /* Ridestro-Info.plist */,
+				FB0C78C92C5699870036FF31 /* RidestroApp.swift */,
 				FB0C78CB2C5699870036FF31 /* ContentView.swift */,
 				FB0C78CD2C5699890036FF31 /* Assets.xcassets */,
 				FB0C78CF2C5699890036FF31 /* Preview Content */,
@@ -124,7 +124,7 @@
 		FB0C78D92C5699890036FF31 /* RidestroTests */ = {
 			isa = PBXGroup;
 			children = (
-				FB0C78DA2C5699890036FF31 /* Ride_StroTests.swift */,
+				FB0C78DA2C5699890036FF31 /* RidestroTests.swift */,
 			);
 			path = RidestroTests;
 			sourceTree = "<group>";
@@ -132,8 +132,8 @@
 		FB0C78E32C5699890036FF31 /* RidestroUITests */ = {
 			isa = PBXGroup;
 			children = (
-				FB0C78E42C5699890036FF31 /* Ride_StroUITests.swift */,
-				FB0C78E62C5699890036FF31 /* Ride_StroUITestsLaunchTests.swift */,
+				FB0C78E42C5699890036FF31 /* RidestroUITests.swift */,
+				FB0C78E62C5699890036FF31 /* RidestroUITestsLaunchTests.swift */,
 			);
 			path = RidestroUITests;
 			sourceTree = "<group>";
@@ -284,7 +284,7 @@
 				FB0C78FD2C569ED40036FF31 /* LocationManager.swift in Sources */,
 				FB0C78CC2C5699870036FF31 /* ContentView.swift in Sources */,
 				FB0C78FB2C569EC30036FF31 /* MapView.swift in Sources */,
-				FB0C78CA2C5699870036FF31 /* Ride_StroApp.swift in Sources */,
+				FB0C78CA2C5699870036FF31 /* RidestroApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB0C78DB2C5699890036FF31 /* Ride_StroTests.swift in Sources */,
+				FB0C78DB2C5699890036FF31 /* RidestroTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,8 +300,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB0C78E72C5699890036FF31 /* Ride_StroUITestsLaunchTests.swift in Sources */,
-				FB0C78E52C5699890036FF31 /* Ride_StroUITests.swift in Sources */,
+				FB0C78E72C5699890036FF31 /* RidestroUITestsLaunchTests.swift in Sources */,
+				FB0C78E52C5699890036FF31 /* RidestroUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +451,7 @@
 				DEVELOPMENT_TEAM = HPXD4Z7FNQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Ride-Stro-Info.plist";
+				INFOPLIST_FILE = "Ridestro-Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app requires access to your location at all times to provide navigation and tracking services.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires access to your location to show your current position on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -464,7 +464,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gondolabros.Ride-Stro";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gondolabros.Ridestro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -483,7 +483,7 @@
 				DEVELOPMENT_TEAM = HPXD4Z7FNQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Ride-Stro-Info.plist";
+				INFOPLIST_FILE = "Ridestro-Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app requires access to your location at all times to provide navigation and tracking services.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires access to your location to show your current position on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -496,7 +496,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gondolabros.Ride-Stro";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gondolabros.Ridestro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

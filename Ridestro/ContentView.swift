@@ -62,7 +62,7 @@ struct ContentView: View {
 
                         }
                     }
-                    .padding([.leading, .trailing], 20)
+                    .padding([.leading, .trailing], 15)
                     .padding(.top, 15)
                     .opacity(isPanelOpen ? 0.0 : max(0, 1 - Double(abs(offset.height) / (UIScreen.main.bounds.height / 2))))
                     
@@ -200,7 +200,7 @@ struct ContentView: View {
                                     Image(systemName: "location.fill")
                                         .padding(12)
                                         .background(Color.white)
-                                        .foregroundColor(Color.black)
+                                        .foregroundColor(Color.pink)
                                         .clipShape(Circle())
                                         .shadow(radius: 5)
                                 }
