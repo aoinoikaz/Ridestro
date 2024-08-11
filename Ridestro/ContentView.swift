@@ -5,9 +5,11 @@
 //  Created by devon tomlin on 2024-07-28.
 //
 
+import Charts
 import SwiftUI
 import Combine
 @_spi(Experimental) import MapboxMaps
+
 
 struct ContentView: View {
     @StateObject private var locationManager = LocationManager()
@@ -105,18 +107,17 @@ struct ContentView: View {
                                 }
                             }
                             
+                            
                             VStack(alignment: .leading) {
                                 Text("Earnings Trends in Kitchener-Waterloo")
-                                    .font(.headline)
+                                    .font(.subheadline)
                                     .padding(.bottom, 5)
-                                HStack {
-                                    Text("Today:")
-                                    Spacer()
-                                }
-                                HStack {
-                                    Text("This Week:")
-                                    Spacer()
-                                }
+                               
+                                DemandChartView()
+                                    .frame(height: 120)
+                                    .padding(.horizontal)
+                                    .background(Color(.systemGray6))
+                                    .cornerRadius(10)
                             }
                             .foregroundColor(.black)
                             .padding()
@@ -293,6 +294,103 @@ struct ActivityIndicator: UIViewRepresentable {
 
     func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<ActivityIndicator>) {
         isAnimating ? uiView.startAnimating() : uiView.stopAnimating()
+    }
+}
+
+struct DemandChartView: View {
+    var body: some View {
+        Chart {
+            ForEach(hourlyData) { data in
+                BarMark(
+                    x: .value("Time", data.hour),
+                    y: .value("Demand", data.demand)
+                )
+                .foregroundStyle(LinearGradient(
+                    gradient: Gradient(colors: [.pink.opacity(0.6), .purple.opacity(0.8)]),
+                    startPoint: .top,
+                    endPoint: .bottom
+                ))
+                
+            }
+        }
+        .chartYAxis {
+            AxisMarks(values: [0, 50, 100]) { value in
+                AxisGridLine()
+                AxisValueLabel {
+                    if let intValue = value.as(Int.self) {
+                        if intValue == 0 {
+                            Text("Low")
+                        } else if intValue == 50 {
+                            Text("Med")
+                        } else if intValue == 100 {
+                            Text("High")
+                        }
+                    }
+                }
+            }
+        }
+        .chartXAxis {
+            AxisMarks(values: [0, 6, 12, 18, 24]) { hour in
+                AxisValueLabel() {
+                    if let intValue = hour.as(Int.self) {
+                        Text(intValue.asString())
+                    }
+                }
+            }
+        }
+        .chartLegend(.hidden)
+        .padding(.top, 10)
+    }
+
+    var hourlyData: [DemandData] {
+        return [
+            DemandData(hour: 0, demand: 50),
+            DemandData(hour: 1, demand: 60),
+            DemandData(hour: 2, demand: 30),
+            DemandData(hour: 3, demand: 80),
+            DemandData(hour: 4, demand: 100),
+            DemandData(hour: 5, demand: 60),
+            DemandData(hour: 6, demand: 40),
+            DemandData(hour: 7, demand: 90),
+            DemandData(hour: 8, demand: 120),
+            DemandData(hour: 9, demand: 80),
+            DemandData(hour: 10, demand: 110),
+            DemandData(hour: 11, demand: 50),
+            DemandData(hour: 12, demand: 70),
+            DemandData(hour: 13, demand: 90),
+            DemandData(hour: 14, demand: 60),
+            DemandData(hour: 15, demand: 80),
+            DemandData(hour: 16, demand: 100),
+            DemandData(hour: 17, demand: 70),
+            DemandData(hour: 18, demand: 90),
+            DemandData(hour: 19, demand: 120),
+            DemandData(hour: 20, demand: 110),
+            DemandData(hour: 21, demand: 50),
+            DemandData(hour: 22, demand: 80),
+            DemandData(hour: 23, demand: 90)
+        ]
+    }
+}
+
+struct DemandData: Identifiable {
+    var id = UUID()
+    var hour: Int
+    var demand: Double
+}
+
+extension Int {
+    func asString() -> String {
+        if self == 0 {
+            return "12AM"
+        } else if self < 12 {
+            return "\(self)AM"
+        } else if self == 12 {
+            return "12PM"
+        } else if self == 24 {
+            return "12AM"
+        } else {
+            return "\(self - 12)PM"
+        }
     }
 }
 
