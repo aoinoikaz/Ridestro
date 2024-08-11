@@ -37,14 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FB0C78C62C5699870036FF31 /* Ridestro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ridestro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB0C78C62C5699870036FF31 /* PingPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PingPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0C78C92C5699870036FF31 /* Ride_StroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride_StroApp.swift; sourceTree = "<group>"; };
 		FB0C78CB2C5699870036FF31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FB0C78CD2C5699890036FF31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB0C78D02C5699890036FF31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FB0C78D62C5699890036FF31 /* RidestroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RidestroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB0C78D62C5699890036FF31 /* PingPalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PingPalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0C78DA2C5699890036FF31 /* Ride_StroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride_StroTests.swift; sourceTree = "<group>"; };
-		FB0C78E02C5699890036FF31 /* RidestroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RidestroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB0C78E02C5699890036FF31 /* PingPalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PingPalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0C78E42C5699890036FF31 /* Ride_StroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride_StroUITests.swift; sourceTree = "<group>"; };
 		FB0C78E62C5699890036FF31 /* Ride_StroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride_StroUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FB0C78F62C5699D50036FF31 /* Ride-Stro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Ride-Stro-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -92,9 +92,9 @@
 		FB0C78C72C5699870036FF31 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FB0C78C62C5699870036FF31 /* Ridestro.app */,
-				FB0C78D62C5699890036FF31 /* RidestroTests.xctest */,
-				FB0C78E02C5699890036FF31 /* RidestroUITests.xctest */,
+				FB0C78C62C5699870036FF31 /* PingPal.app */,
+				FB0C78D62C5699890036FF31 /* PingPalTests.xctest */,
+				FB0C78E02C5699890036FF31 /* PingPalUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,9 +148,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FB0C78C52C5699870036FF31 /* Ridestro */ = {
+		FB0C78C52C5699870036FF31 /* PingPal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB0C78EA2C5699890036FF31 /* Build configuration list for PBXNativeTarget "Ridestro" */;
+			buildConfigurationList = FB0C78EA2C5699890036FF31 /* Build configuration list for PBXNativeTarget "PingPal" */;
 			buildPhases = (
 				FB0C78C22C5699870036FF31 /* Sources */,
 				FB0C78C32C5699870036FF31 /* Frameworks */,
@@ -160,17 +160,17 @@
 			);
 			dependencies = (
 			);
-			name = Ridestro;
+			name = PingPal;
 			packageProductDependencies = (
 				FB0C78F82C569A1A0036FF31 /* MapboxMaps */,
 			);
 			productName = "Ride Stro";
-			productReference = FB0C78C62C5699870036FF31 /* Ridestro.app */;
+			productReference = FB0C78C62C5699870036FF31 /* PingPal.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FB0C78D52C5699890036FF31 /* RidestroTests */ = {
+		FB0C78D52C5699890036FF31 /* PingPalTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB0C78ED2C5699890036FF31 /* Build configuration list for PBXNativeTarget "RidestroTests" */;
+			buildConfigurationList = FB0C78ED2C5699890036FF31 /* Build configuration list for PBXNativeTarget "PingPalTests" */;
 			buildPhases = (
 				FB0C78D22C5699890036FF31 /* Sources */,
 				FB0C78D32C5699890036FF31 /* Frameworks */,
@@ -181,14 +181,14 @@
 			dependencies = (
 				FB0C78D82C5699890036FF31 /* PBXTargetDependency */,
 			);
-			name = RidestroTests;
+			name = PingPalTests;
 			productName = "Ride StroTests";
-			productReference = FB0C78D62C5699890036FF31 /* RidestroTests.xctest */;
+			productReference = FB0C78D62C5699890036FF31 /* PingPalTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FB0C78DF2C5699890036FF31 /* RidestroUITests */ = {
+		FB0C78DF2C5699890036FF31 /* PingPalUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB0C78F02C5699890036FF31 /* Build configuration list for PBXNativeTarget "RidestroUITests" */;
+			buildConfigurationList = FB0C78F02C5699890036FF31 /* Build configuration list for PBXNativeTarget "PingPalUITests" */;
 			buildPhases = (
 				FB0C78DC2C5699890036FF31 /* Sources */,
 				FB0C78DD2C5699890036FF31 /* Frameworks */,
@@ -199,9 +199,9 @@
 			dependencies = (
 				FB0C78E22C5699890036FF31 /* PBXTargetDependency */,
 			);
-			name = RidestroUITests;
+			name = PingPalUITests;
 			productName = "Ride StroUITests";
-			productReference = FB0C78E02C5699890036FF31 /* RidestroUITests.xctest */;
+			productReference = FB0C78E02C5699890036FF31 /* PingPalUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -227,7 +227,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FB0C78C12C5699870036FF31 /* Build configuration list for PBXProject "Ridestro" */;
+			buildConfigurationList = FB0C78C12C5699870036FF31 /* Build configuration list for PBXProject "PingPal" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -243,9 +243,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FB0C78C52C5699870036FF31 /* Ridestro */,
-				FB0C78D52C5699890036FF31 /* RidestroTests */,
-				FB0C78DF2C5699890036FF31 /* RidestroUITests */,
+				FB0C78C52C5699870036FF31 /* PingPal */,
+				FB0C78D52C5699890036FF31 /* PingPalTests */,
+				FB0C78DF2C5699890036FF31 /* PingPalUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -310,12 +310,12 @@
 /* Begin PBXTargetDependency section */
 		FB0C78D82C5699890036FF31 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FB0C78C52C5699870036FF31 /* Ridestro */;
+			target = FB0C78C52C5699870036FF31 /* PingPal */;
 			targetProxy = FB0C78D72C5699890036FF31 /* PBXContainerItemProxy */;
 		};
 		FB0C78E22C5699890036FF31 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FB0C78C52C5699870036FF31 /* Ridestro */;
+			target = FB0C78C52C5699870036FF31 /* PingPal */;
 			targetProxy = FB0C78E12C5699890036FF31 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -520,7 +520,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ridestro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ridestro";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PingPal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PingPal";
 			};
 			name = Debug;
 		};
@@ -540,7 +540,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ridestro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ridestro";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PingPal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PingPal";
 			};
 			name = Release;
 		};
@@ -583,7 +583,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FB0C78C12C5699870036FF31 /* Build configuration list for PBXProject "Ridestro" */ = {
+		FB0C78C12C5699870036FF31 /* Build configuration list for PBXProject "PingPal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB0C78E82C5699890036FF31 /* Debug */,
@@ -592,7 +592,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB0C78EA2C5699890036FF31 /* Build configuration list for PBXNativeTarget "Ridestro" */ = {
+		FB0C78EA2C5699890036FF31 /* Build configuration list for PBXNativeTarget "PingPal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB0C78EB2C5699890036FF31 /* Debug */,
@@ -601,7 +601,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB0C78ED2C5699890036FF31 /* Build configuration list for PBXNativeTarget "RidestroTests" */ = {
+		FB0C78ED2C5699890036FF31 /* Build configuration list for PBXNativeTarget "PingPalTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB0C78EE2C5699890036FF31 /* Debug */,
@@ -610,7 +610,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB0C78F02C5699890036FF31 /* Build configuration list for PBXNativeTarget "RidestroUITests" */ = {
+		FB0C78F02C5699890036FF31 /* Build configuration list for PBXNativeTarget "PingPalUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB0C78F12C5699890036FF31 /* Debug */,
