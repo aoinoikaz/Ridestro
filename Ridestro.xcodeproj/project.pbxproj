@@ -11,30 +11,10 @@
 		FB0C78CC2C5699870036FF31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78CB2C5699870036FF31 /* ContentView.swift */; };
 		FB0C78CE2C5699890036FF31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0C78CD2C5699890036FF31 /* Assets.xcassets */; };
 		FB0C78D12C5699890036FF31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0C78D02C5699890036FF31 /* Preview Assets.xcassets */; };
-		FB0C78DB2C5699890036FF31 /* RidestroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78DA2C5699890036FF31 /* RidestroTests.swift */; };
-		FB0C78E52C5699890036FF31 /* RidestroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78E42C5699890036FF31 /* RidestroUITests.swift */; };
-		FB0C78E72C5699890036FF31 /* RidestroUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78E62C5699890036FF31 /* RidestroUITestsLaunchTests.swift */; };
 		FB0C78F92C569A1A0036FF31 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = FB0C78F82C569A1A0036FF31 /* MapboxMaps */; };
 		FB0C78FB2C569EC30036FF31 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78FA2C569EC30036FF31 /* MapView.swift */; };
 		FB0C78FD2C569ED40036FF31 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C78FC2C569ED40036FF31 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		FB0C78D72C5699890036FF31 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FB0C78BE2C5699870036FF31 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FB0C78C52C5699870036FF31;
-			remoteInfo = "Ride Stro";
-		};
-		FB0C78E12C5699890036FF31 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FB0C78BE2C5699870036FF31 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FB0C78C52C5699870036FF31;
-			remoteInfo = "Ride Stro";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FB0C78C62C5699870036FF31 /* Ridestro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ridestro.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,11 +22,6 @@
 		FB0C78CB2C5699870036FF31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FB0C78CD2C5699890036FF31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB0C78D02C5699890036FF31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FB0C78D62C5699890036FF31 /* RidestroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RidestroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB0C78DA2C5699890036FF31 /* RidestroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidestroTests.swift; sourceTree = "<group>"; };
-		FB0C78E02C5699890036FF31 /* RidestroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RidestroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB0C78E42C5699890036FF31 /* RidestroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidestroUITests.swift; sourceTree = "<group>"; };
-		FB0C78E62C5699890036FF31 /* RidestroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidestroUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FB0C78F62C5699D50036FF31 /* Ridestro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ridestro-Info.plist"; sourceTree = SOURCE_ROOT; };
 		FB0C78FA2C569EC30036FF31 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		FB0C78FC2C569ED40036FF31 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -61,20 +36,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB0C78D32C5699890036FF31 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB0C78DD2C5699890036FF31 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,8 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				FB0C78C82C5699870036FF31 /* Ridestro */,
-				FB0C78D92C5699890036FF31 /* RidestroTests */,
-				FB0C78E32C5699890036FF31 /* RidestroUITests */,
 				FB0C78C72C5699870036FF31 /* Products */,
 				FB0C78F72C569A1A0036FF31 /* Frameworks */,
 			);
@@ -93,8 +52,6 @@
 			isa = PBXGroup;
 			children = (
 				FB0C78C62C5699870036FF31 /* Ridestro.app */,
-				FB0C78D62C5699890036FF31 /* RidestroTests.xctest */,
-				FB0C78E02C5699890036FF31 /* RidestroUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,23 +76,6 @@
 				FB0C78D02C5699890036FF31 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		FB0C78D92C5699890036FF31 /* RidestroTests */ = {
-			isa = PBXGroup;
-			children = (
-				FB0C78DA2C5699890036FF31 /* RidestroTests.swift */,
-			);
-			path = RidestroTests;
-			sourceTree = "<group>";
-		};
-		FB0C78E32C5699890036FF31 /* RidestroUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FB0C78E42C5699890036FF31 /* RidestroUITests.swift */,
-				FB0C78E62C5699890036FF31 /* RidestroUITestsLaunchTests.swift */,
-			);
-			path = RidestroUITests;
 			sourceTree = "<group>";
 		};
 		FB0C78F72C569A1A0036FF31 /* Frameworks */ = {
@@ -168,42 +108,6 @@
 			productReference = FB0C78C62C5699870036FF31 /* Ridestro.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FB0C78D52C5699890036FF31 /* RidestroTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FB0C78ED2C5699890036FF31 /* Build configuration list for PBXNativeTarget "RidestroTests" */;
-			buildPhases = (
-				FB0C78D22C5699890036FF31 /* Sources */,
-				FB0C78D32C5699890036FF31 /* Frameworks */,
-				FB0C78D42C5699890036FF31 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FB0C78D82C5699890036FF31 /* PBXTargetDependency */,
-			);
-			name = RidestroTests;
-			productName = "Ride StroTests";
-			productReference = FB0C78D62C5699890036FF31 /* RidestroTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		FB0C78DF2C5699890036FF31 /* RidestroUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FB0C78F02C5699890036FF31 /* Build configuration list for PBXNativeTarget "RidestroUITests" */;
-			buildPhases = (
-				FB0C78DC2C5699890036FF31 /* Sources */,
-				FB0C78DD2C5699890036FF31 /* Frameworks */,
-				FB0C78DE2C5699890036FF31 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FB0C78E22C5699890036FF31 /* PBXTargetDependency */,
-			);
-			name = RidestroUITests;
-			productName = "Ride StroUITests";
-			productReference = FB0C78E02C5699890036FF31 /* RidestroUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -216,14 +120,6 @@
 				TargetAttributes = {
 					FB0C78C52C5699870036FF31 = {
 						CreatedOnToolsVersion = 15.4;
-					};
-					FB0C78D52C5699890036FF31 = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = FB0C78C52C5699870036FF31;
-					};
-					FB0C78DF2C5699890036FF31 = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = FB0C78C52C5699870036FF31;
 					};
 				};
 			};
@@ -244,8 +140,6 @@
 			projectRoot = "";
 			targets = (
 				FB0C78C52C5699870036FF31 /* Ridestro */,
-				FB0C78D52C5699890036FF31 /* RidestroTests */,
-				FB0C78DF2C5699890036FF31 /* RidestroUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,20 +151,6 @@
 			files = (
 				FB0C78D12C5699890036FF31 /* Preview Assets.xcassets in Resources */,
 				FB0C78CE2C5699890036FF31 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB0C78D42C5699890036FF31 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB0C78DE2C5699890036FF31 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,37 +168,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB0C78D22C5699890036FF31 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FB0C78DB2C5699890036FF31 /* RidestroTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB0C78DC2C5699890036FF31 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FB0C78E72C5699890036FF31 /* RidestroUITestsLaunchTests.swift in Sources */,
-				FB0C78E52C5699890036FF31 /* RidestroUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FB0C78D82C5699890036FF31 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FB0C78C52C5699870036FF31 /* Ridestro */;
-			targetProxy = FB0C78D72C5699890036FF31 /* PBXContainerItemProxy */;
-		};
-		FB0C78E22C5699890036FF31 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FB0C78C52C5699870036FF31 /* Ridestro */;
-			targetProxy = FB0C78E12C5699890036FF31 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FB0C78E82C5699890036FF31 /* Debug */ = {
@@ -504,82 +354,6 @@
 			};
 			name = Release;
 		};
-		FB0C78EE2C5699890036FF31 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HPXD4Z7FNQ;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gondolabros.RidestroTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ridestro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ridestro";
-			};
-			name = Debug;
-		};
-		FB0C78EF2C5699890036FF31 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HPXD4Z7FNQ;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gondolabros.RidestroTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ridestro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ridestro";
-			};
-			name = Release;
-		};
-		FB0C78F12C5699890036FF31 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HPXD4Z7FNQ;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gondolabros.RidestroUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Ridestro;
-			};
-			name = Debug;
-		};
-		FB0C78F22C5699890036FF31 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HPXD4Z7FNQ;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gondolabros.RidestroUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Ridestro;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -597,24 +371,6 @@
 			buildConfigurations = (
 				FB0C78EB2C5699890036FF31 /* Debug */,
 				FB0C78EC2C5699890036FF31 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FB0C78ED2C5699890036FF31 /* Build configuration list for PBXNativeTarget "RidestroTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FB0C78EE2C5699890036FF31 /* Debug */,
-				FB0C78EF2C5699890036FF31 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FB0C78F02C5699890036FF31 /* Build configuration list for PBXNativeTarget "RidestroUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FB0C78F12C5699890036FF31 /* Debug */,
-				FB0C78F22C5699890036FF31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
