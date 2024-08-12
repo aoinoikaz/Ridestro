@@ -12,6 +12,7 @@ struct MapView: UIViewRepresentable {
     var userLocation: CLLocationCoordinate2D?
     @Binding var isMapCentered: Bool
     @Binding var mapView: MapboxMaps.MapView?
+    @Environment(\.colorScheme) var colorScheme
 
     func makeUIView(context: Context) -> MapboxMaps.MapView {
         guard let accessToken = Bundle.main.object(forInfoDictionaryKey: "MBXAccessToken") as? String else {
@@ -19,7 +20,7 @@ struct MapView: UIViewRepresentable {
         }
 
         let resourceOptions = ResourceOptions(accessToken: accessToken)
-        let mapInitOptions = MapInitOptions(resourceOptions: resourceOptions, styleURI: .dark)
+        let mapInitOptions = MapInitOptions(resourceOptions: resourceOptions, styleURI: colorScheme == .dark ? .dark : .light)
         let newMapView = MapboxMaps.MapView(frame: .zero, mapInitOptions: mapInitOptions)
 
         newMapView.ornaments.compassView.isHidden = true
@@ -48,7 +49,7 @@ struct MapView: UIViewRepresentable {
             // Check if map is centered based on all camera attributes
             let isCentered = (abs(mapCenter.latitude - userLocation.latitude) < coordinateTolerance &&
                               abs(mapCenter.longitude - userLocation.longitude) < coordinateTolerance &&
-                              abs(zoomLevel - 14.0) < zoomTolerance &&
+                              abs(zoomLevel - 13.0) < zoomTolerance &&
                               abs(bearing) < bearingTolerance &&
                               abs(pitch) < pitchTolerance)
 
@@ -66,8 +67,13 @@ struct MapView: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: MapboxMaps.MapView, context: Context) {
+        let styleURI: StyleURI = colorScheme == .dark ? .dark : .light
+        if uiView.mapboxMap.style.uri != styleURI {
+            uiView.mapboxMap.style.uri = styleURI
+        }
+        
         if isMapCentered, let userLocation = userLocation {
-            let cameraOptions = CameraOptions(center: userLocation, zoom: 14)
+            let cameraOptions = CameraOptions(center: userLocation, zoom: 13)
             uiView.mapboxMap.setCamera(to: cameraOptions)
         }
     }

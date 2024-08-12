@@ -10,7 +10,6 @@ import SwiftUI
 import Combine
 @_spi(Experimental) import MapboxMaps
 
-
 struct ContentView: View {
     @StateObject private var locationManager = LocationManager()
     @State private var isOnline = false
@@ -42,8 +41,8 @@ struct ContentView: View {
                             Image(systemName: "line.horizontal.3")
                                 .padding(20)
                                 .bold()
-                                .background(Color.white)
-                                .foregroundColor(Color.pink)
+                                .background(Color(.systemBackground))
+                                .foregroundColor(Color(.systemPink))
                                 .clipShape(Circle())
                                 .shadow(radius: 5)
                              
@@ -55,8 +54,8 @@ struct ContentView: View {
                             Image(systemName: "magnifyingglass")
                                 .padding(15)
                                 .bold()
-                                .foregroundColor(Color.pink)
-                                .background(Color.white)
+                                .background(Color(.systemBackground))
+                                .foregroundColor(Color(.systemPink))
                                 .clipShape(Circle())
                                 .shadow(radius: 5)
 
@@ -75,7 +74,7 @@ struct ContentView: View {
                                 .font(.headline)
                         }
                         .padding(15)
-                        .background(Color.black)
+                        .background(Color(.systemBackground))
                         .cornerRadius(25)
                         .shadow(radius: 5)
                         Spacer()
@@ -86,13 +85,14 @@ struct ContentView: View {
                     Spacer()
                     
                     // Sliding Panel with Go Online/Offline button
-                    ZStack(alignment: .top) {
+                    ZStack(alignment: .top) 
+                    {
                         VStack {
                             if isOnline {
                                 VStack(alignment: .center) {
                                     Text("Finding pings...")
-                                        .font(.subheadline)
-                                        .foregroundColor(.gray)
+                                        .font(.headline)
+                                        .foregroundColor(Color.primary)
                                     LoadingAnimation()
                                         .frame(height: 8)
                                         .padding(.horizontal, 10)
@@ -102,8 +102,8 @@ struct ContentView: View {
                             {
                                 VStack(alignment: .center) {
                                     Text("You're offline.")
-                                        .font(.subheadline)
-                                        .foregroundColor(.gray)
+                                        .font(.headline)
+                                        .foregroundColor(Color.primary)
                                 }
                             }
                             
@@ -114,14 +114,14 @@ struct ContentView: View {
                                     .padding(.bottom, 5)
                                
                                 DemandChartView()
-                                    .frame(height: 120)
+                                    .frame(height: 100)
                                     .padding(.horizontal)
                                     .background(Color(.systemGray6))
                                     .cornerRadius(10)
                             }
-                            .foregroundColor(.black)
+                            .foregroundColor(Color.primary)
                             .padding()
-                            .background(Color.white)
+                            .background(Color(.systemGray6))
                             .cornerRadius(10)
                             .shadow(radius: 5)
                             
@@ -138,7 +138,7 @@ struct ContentView: View {
                                     Text("Go Offline")
                                         .padding()
                                         .frame(width: 150, height: 50)
-                                        .background(Color.pink)
+                                        .background(Color(.systemPink))
                                         .foregroundColor(.white)
                                         .cornerRadius(25)
                                         .shadow(radius: 5)
@@ -147,7 +147,7 @@ struct ContentView: View {
                             }
                         }
                         .padding()
-                        .background(Color.white)
+                        .background(Color(.systemGray6))
                         .cornerRadius(20)
                         .shadow(radius: 10)
                         .offset(y: isPanelOpen ? 0 : UIScreen.main.bounds.height / 2)
@@ -169,7 +169,7 @@ struct ContentView: View {
                                         self.offset = .zero
                                     }
                                 }
-                        )
+                            )
                         
                         // Centered "Go Online" Button above the panel
                         if !isOnline {
@@ -181,7 +181,7 @@ struct ContentView: View {
                                 Text("GO")
                                     .padding(30)
                                     .bold()
-                                    .background(Color.blue)
+                                    .background(Color(.systemBlue))
                                     .foregroundColor(.white)
                                     .clipShape(Circle())
                                     .shadow(radius: 5)
@@ -199,8 +199,8 @@ struct ContentView: View {
                                 }) {
                                     Image(systemName: "location.fill")
                                         .padding(12)
-                                        .background(Color.white)
-                                        .foregroundColor(Color.pink)
+                                        .background(Color(.systemBackground))
+                                        .foregroundColor(Color(.systemPink))
                                         .clipShape(Circle())
                                         .shadow(radius: 5)
                                 }
@@ -214,7 +214,8 @@ struct ContentView: View {
             } else {
                 Text("Ridestro...")
                     .font(.title)
-                    .foregroundColor(.gray)
+                    .foregroundColor(Color(.systemPink))
+                    .background(Color(.systemBackground))
             }
         }
         .onAppear {
@@ -233,15 +234,15 @@ struct ContentView: View {
     
     var attributedEarnings: AttributedString {
         var earningsString = AttributedString(localized: "$\(earnings, specifier: "%.2f")")
-        earningsString[earningsString.range(of: "$")!].foregroundColor = .pink
-        earningsString[earningsString.range(of: String(format: "%.2f", earnings))!].foregroundColor = .white
+        earningsString[earningsString.range(of: "$")!].foregroundColor = Color(.systemGreen)
+        earningsString[earningsString.range(of: String(format: "%.2f", earnings))!].foregroundColor = Color.primary
         return earningsString
     }
     
     func recenter() {
         if let mapView = self.mapView, let userLocation = locationManager.userLocation {
             UIView.animate(withDuration: 1.5) {
-                let cameraOptions = CameraOptions(center: userLocation, zoom: 14, bearing: 0, pitch: 0)
+                let cameraOptions = CameraOptions(center: userLocation, zoom: 13, bearing: 0, pitch: 0)
                 mapView.mapboxMap.setCamera(to: cameraOptions)
             }
         }
@@ -262,19 +263,19 @@ struct LoadingAnimation: View {
                 // Pink line width and offset calculation
                 let maxOffset = geometry.size.width / 2
                 let currentWidth = maxOffset * (1 - factor)
-                let minOpacity = 0.3  // Minimum opacity to avoid being too bright
-                let maxOpacity = 0.6  // Maximum opacity to create a more subtle effect
+                let minOpacity = 0.4  // Minimum opacity to avoid being too bright
+                let maxOpacity = 0.8  // Maximum opacity to create a more subtle effect
                 let opacity = minOpacity + (maxOpacity - minOpacity) * sin(progress * .pi * 2)
 
                 ZStack {
                     // Background stationary gray line
                     Capsule()
-                        .fill(Color.gray.opacity(0.2))
+                        .fill(Color(.systemGray).opacity(0.2))
                         .frame(height: 2)
 
                     // Pink line expanding from center and collapsing back to center
                     Capsule()
-                        .fill(Color.pink.opacity(opacity))
+                        .fill(Color(.systemPink).opacity(opacity))
                         .frame(width: currentWidth * 2, height: 2)
                 }
                 .frame(width: geometry.size.width, alignment: .center)
@@ -306,7 +307,7 @@ struct DemandChartView: View {
                     y: .value("Demand", data.demand)
                 )
                 .foregroundStyle(LinearGradient(
-                    gradient: Gradient(colors: [.pink.opacity(0.6), .purple.opacity(0.8)]),
+                    gradient: Gradient(colors: [Color(.systemPink).opacity(0.6), Color(.systemPurple).opacity(0.8)]),
                     startPoint: .top,
                     endPoint: .bottom
                 ))
